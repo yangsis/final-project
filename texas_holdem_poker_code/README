@@ -1,0 +1,86 @@
+Limited Texas Hold'em
+author =
+Siyu Chen
+Sisong Yang
+Yuhang Zhou
+Indiana University
+
+
+1. Introduction
+The program implements a limited Texas Hold'em Poker.
+You can participate in the game with other AI players.
+User will choose the number of AI, the initialized chips, and the number of games to compete the final winner.
+
+2. Files
+i) main.py: control the procedure of the game
+ii) objects.py: define the attributes and actions of objects(player, card,deck).
+iii) poker.py: the class of the poker. It is the class to unit all classes and control the game
+iv) bet.py: it implements the functions of actions(raise,check,fold,match) of players.
+v) prob.py: the expected value of hand cards are hardcoded in the file
+vi) rules.py: the file included the strategies and rules for decision.
+
+3. Run the code
+
+$python main.py
+Then the game will give the instruction of the following steps.
+
+4. Citation
+For implementing the poker game,
+we use some part of the basic framework for poker game from the following link:
+https://github.com/omarshammas/pyPoker-Texas-HoldEm
+
+5. Sample Output
+
+Enter number of players: 2
+Enter initial money of each players(as least 20 dollars):100
+Enter round of game:1
+the game is Limit Texas, good luck:
+
+**************************************************
+round 1
+Shuffling...
+Cutting...
+Distributing...
+**************************************************
+1.Pre-Flop Round
+--------------------------------------------------
+AI player 0 , identity is small blind ,  playing
+* you are player 1 , identity is  big blind ,  playing
+--------------------------------------------------
+small blind: 5.0 ,big blind:  10.0
+your hand - K♦  10♠
+--------------------------------------------------
+player   0   computer   match to  10.0
+the current pot is : 20.0
+----------It is your turn----------
+your chip left is :  90.0
+1.fold, 2.raise, 3.match/check, enter the number of option: 2
+enter the amount of money you want to raise, 2-10 dollars is allowed: 2
+player   1   human   raise to  12.0
+the current pot is : 22.0
+
+player   0   computer   fold
+
+**************************************************
+2.Flop Round
+--------------------------------------------------
+AI player 0 , identity is small blind ,  out
+* you are player 1 , identity is  big blind ,  playing
+--------------------------------------------------
+your hand - K♦  10♠
+community cards - 8♥  K♣  3♠
+--------------------------------------------------
+
+community cards - 8♥  K♣  3♠  4♦  4♣
+6. Determining Score
+7. Determining Winner
+status:
+player  0 : out
+player  1 : playing
+WINNER(S):
+human  player  1  wins!!
+==========================
+--------- Tie has Been Determined --------
+Loser  -- 3♠  4♠  4♦  4♣  8♥  Q♦  K♣   --- 3 of a kind
+Winner ** 3♠  4♦  4♣  8♥  10♠  K♦  K♣   --- 2 pair
+press any key to continue the new game
